@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Clases de Musica</title>
+</head>
+<body>
+
+  <div id="contenedor">
+
+      <div id="cabezal" class="clearfix"><!--CABEZAL--> 
+          <!--cabezal PRE login-->
+          <div id="divContenedorCabezal">
+            <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
+            <div id="divNavPreLogin" class="misContenedores preLogin navPrincipal" style="display: none;">
+              <h3>Bienvenidos a nuestra App de clases de música</h3>
+            </div>
+            <div id="navPrincipalAl" class="menuAlumno navPrincipal">
+              <ul>
+                <li>
+                  <a id="aMenuAlEjercicios" class="menuAlumno">Ejercicios</a>
+                </li>
+                <li>
+                  <a id="aMenuAlEntregas" class="menuAlumno">Entregas</a>
+                </li>
+                <li>
+                  <a id="aMenuAlEjResueltos" class="menuAlumno">Ej Resueltos</a>
+                </li>
+                <li>
+                  <a id="aMenuAlEstadisticas" class="menuAlumno">Estadisticas</a>
+                </li>
+              </ul>
+            </div>
+            <div id="navPrincipalDc" class="menuDocente navPrincipal">
+              <ul>
+                <li>
+                  <a id="aMenuDcAsigNivel" class="menuDocente">Asig Nivel</a>
+                </li>
+                <li>
+                  <a id="aMenuDcPlantearEj" class="menuDocente">Plantear Ej</a>
+                </li>
+                <li>
+                  <a id="aMenuDcDevoluciones" class="menuDocente">Devoluciones</a>
+                </li> 
+                <li>
+                  <a id="aMenuDcEstadisticas" class="menuDocente">Estadisticas</a>
+                </li>
+              </ul>
+            </div>
+            <!--
+            <div id="divCerrarSesion">
+              <input type="button" id="btnCerrarSesion" value="Cerrar Sesion">
+            </div>--><!--
+            <div id="aux">
+              <a>Menú alt. 1</a> | <a>Menú alt. 2</a>
+            </div> FIN AUX -->
+          </div>
+          <!--FIN cabezal PRE login-->
+
+
+          <!--cabezal POST login-->
+
+         
+
+            <!--DIV PARA CUANDO EL USUARIO DA LOGIN-->
+            <!--ESTA OCULTO HASTA QUE EL USUARIO HAGA LOGIN, LUEGO SE MUESTRA Y SE OCULTAN LOS OTROS-->
+            <div id=divCabezalUserLogueado> 
+              <!--CONTENEDOR CABEZAL CUANDO EL USUARIO HACE LOGIN
+              <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">-->
+              <ul id="navPrincipal">
+                <!--<li>
+                  <a id="divInterfazDoc01">Sección 4</a>
+                  <div id="divInterfazDoc01">
+                    <input type="button" id="btnInterfazPlantearEj" value="Plantear Ejs">
+                  </div>
+                </li>
+                <li>
+                  <div id="divInterfazDoc02">
+                    <input type="button" id="btnInterfazAsignarNiv" value="Asignar Nivel">
+                  </div>
+                </li>
+                <li>
+                  <div id="divInterfazDoc03">
+                    <input type="button" id="btnInterfazRedactarDev" value="Redactar Devoluciones">
+                  </div>
+                </li>
+                <li>
+                  <a>Sección 4</a>
+                </li>
+                -->
+              </ul>
+              <!--<div id="divCerrarSesion">
+                <input type="button" id="btnCerrarSesion" value="Cerrar Sesion">
+              </div>-->
+              <div id="divUsrSesion" class="navPrincipal">
+                
+              </div><!-- FIN AUX -->
+              <span id="spnUserLogged">
+        
+              </span>
+              <!-- <input type="button" id="btnCerrarSesion" value="Cerrar Sesion"/> -->
+      
+        
+            </div> <!--FIN DIV CONTENEDOR USUARIO LOGIN-->
+
+      </div><!-- FIN CABEZAL -->
+
+      <div id="contenido">
+        <!-- CONTENIDO ANTES DE LOGUEARSE -->
+        <div id="contenidoPreLogin" class="misContenedores preLogin" >
+          <h3 class="tituloPrelogin">Inicie sesion si ya tiene un usuario</h3>
+          <div id="divLogin" class="misContenedores prelogin">
+            <h5>Login:</h5>
+            <label for="txtUsuario">Usuario: </label>
+            <input id="txtUsuario" type="text" value="">
+            <br>
+            <label for="txtPwd">contraseña: </label>
+            <input id="txtPwd" type="password" value=""> 
+            <br>
+            <input id="btnLogin" type="button" value="Login">
+            <br>
+            <span id="spnUsuario" class="error"></span>
+            <span id="spnPwd" class="error"></span>
+            <hr>
+          </div>
+          <h3 class="tituloPrelogin">Registrese si todavia no tiene un usuario</h3>
+          <div id="divRegistro" class="misContenedores prelogin">
+            <h5>Registro Usuario:</h5>
+            <label for="txtNameUsr">Nombre:</label>
+            <input type="text" id="txtNameUsr"><br>
+            <label for="txtUserName">Username:</label>
+            <input type="text" id="txtUserName"><br>
+            <label for="txtPassUsr">Password:</label>
+            <input type="password" id="txtPassUsr"><br>
+            <label for="chkUsr">Seleccione si es un Alumno:</label>
+            <input type="checkbox" id="chkUsuario" name="chkUsr" value="">
+            <div id="divComboUsuarios"></div>
+            <input id="btnRegUsuario" type="button" value="Registrarme">
+            <p id="pMostrarErrorRegistro">
+            <hr>
+          </div>
+        </div>
+        <!--
+          <div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Buscar ejercicio" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+          </div>
+
+        -->
+
+<!------------------------------------------------------  SECCIONES ALUMNO ------------------------------------------------------>
+          
+        <div id="divBuscarEjercicio" class="misContenedores ejercicios">
+          <div class="input-group mb-3">
+            <input id="txtBuscarEj" type="text" class="form-control" placeholder="Buscar Ejercicio" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="btnBuscarEj">Buscar</button>
+          </div>
+        </div>
+
+
+        <div id="divVerEjercicio" class="misContenedores ejercicios" >
+          <!--
+            <h3 class="ejercicios">Esta es la seccion para ver los ejercicios</h3>
+            <h2>Ejercicio 1</h2>
+            <img src="https://develotion.com/assets/img/ej1.png">
+            <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
+            <input type="button" value="Hacer entrega">
+            <div>
+            </div>  
+          --> 
+          <!--
+            <div>
+              <h2>Ejercicio 4</h2>
+              <img src="https://develotion.com/assets/img/ej1.png">
+              <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
+              <input type="button" value="Hacer entrega">
+            </div>
+            -->  
+
+        </div>
+
+        <div id="divVerEjerAlumn" class="misContenedores ejercicios">
+
+        </div>
+
+
+
+        <div id="divEntregas" class="misContenedores entregas">
+          <h3 class="entregas">Esta es la seccion para realizar las entregas</h3>
+        </div>
+
+        <div id="divEjResueltos" class="misContenedores ejResueltos">
+          <h3 class="ejResueltos">Esta es la seccion para ver los ejercicios resueltos</h3>
+        </div>
+
+        <div id="divEstadisticasAl" class="misContenedores estadisticasAl">
+          <h3 class="estadisticasAl">Esta es la seccion para ver las estadisticas del alumno</h3>
+        </div>
+
+<!------------------------------------------------------  SECCIONES DOCENTE ------------------------------------------------------>
+
+
+        <div id="divPlantearEjercicio" class="misContenedores plantearEj" >
+          <h3>Crear un Ejercicio</h3>
+          <label for="txtTitulo">Titulo: </label><input id="txtTitulo" type="text"><span id="spnTitulo" class="error"></span><br><br>
+          <label for="selNivel">Nivel:</label>
+          <select id="selNivel">
+            <option value="-1">Elija un Nivel</option>
+            <option value="1">Inicial</option>
+            <option value="2">Intermedio</option>
+            <option value="3">Avanzado</option>
+          </select>
+          <span id="spnSelNivel" class="error"></span>
+          <br>
+          <label for="txtDescripcion">Descripcion: </label>
+          <textarea id="txtDescripcion"></textarea><br>
+          <label for="fileImagen">Imagen: </label><input id="fileImagen" type="file"> 
+          <br>
+
+          <!--
+            
+            <span id="spnFilImagen" class="error"></span><br>
+            <label for="filSonido">Sonido: </label><input id="filSonido" type="file"> <span id="spnFilSonido"
+              class="error"></span><br>
+            <br> 
+          --> 
+          <input id="btnCrearEjercicio" type="button" value="Crear">
+          <p id="pMostrarPlantearEjercicio"></p>
+          <!--
+            <input id="btnMostrar" type="button" value="Mostrar">
+          -->
+        </div>
+
+        <div id="divInterfazAsignarNiv" class="misContenedores asignarNiv">
+          <h3 class="asignarNiv">Esta es la seccion para asignar nivel</h3>
+        </div>
+
+        <div id="divInterfazRedactarDev" class="misContenedores redactarDev">
+          <h3 class="redactarDev">Esta es la seccion para redactarDev</h3>
+        </div>
+
+        <div id="divInterfazEstadisticasDc" class="misContenedores estadisticasDc">
+          <h3 class="estadisticasDc">Estas son las estadisticas del docente</h3>
+        </div>
+
+      </div><!-- FIN CONTENIDO -->
+
+      <div id="pie">
+            <a href="https://www.ort.edu.uy">Mendy & Mattos - Obligatorio P1 - ORT</a>
+      </div><!-- FIN PIE -->
+
+                
+  </div><!-- FIN CONTENEDOR -->
+
+  <script src="js/codeClases.js"></script>
+  <script src="js/codeApp.js"></script>
+  <script src="js/codeManejoUI.js"></script>
+</body>
+</html>
+
+
